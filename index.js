@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-export async function getPhoto(uri) {
+async function getPhoto(uri) {
+  let photo;
   try {
-    const photo = await axios.get(
+    photo = await axios.get(
       `https://ucmerced-cdn.presence.io/event-photos/8fd48e04-025a-4b9c-9e7b-595adaeb479c/${uri}`
     );
   } catch (err) {
